@@ -40,9 +40,13 @@ steps:
     zipAfterPublish: True
 - task: PublishPipelineArtifact@0
   displayName: PublishPipelineArtifact
-- task: AzureRmWebAppDeployment@3
-  displayName: Deploy
+- task: AzureWebApp@1
   inputs:
     azureSubscription: 'persistent'
-    WebAppName: 'pipelines-dotnet-core'
-    Package: $(System.ArtifactsDirectory)/**/*.zip
+    appType: 'webApp'
+    appName: 'pipelines-dotnet-core'
+    deployToSlotOrASE: true
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
+ 

@@ -39,5 +39,5 @@ steps:
   displayName: Deploy
   inputs:
     azureSubscription: 'persistent'
-    WebAppName: 'RampUpSampleApp'
+    WebAppName: 'pipelines-dotnet-core'
     Package: $(System.ArtifactsDirectory)/**/*.zip

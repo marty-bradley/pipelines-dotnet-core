@@ -38,8 +38,8 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) '
     zipAfterPublish: True
-- task: PublishBuildArtifacts@1
-    displayName: PublishBuildArtifacts
+- task: PublishPipelineArtifact@0
+  displayName: PublishPipelineArtifact
 - task: AzureRmWebAppDeployment@3
   displayName: Deploy
   inputs:

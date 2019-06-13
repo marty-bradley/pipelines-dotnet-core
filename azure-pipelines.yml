@@ -39,6 +39,7 @@ steps:
     arguments: '--configuration $(BuildConfiguration) '
     zipAfterPublish: True
 - task: PublishBuildArtifacts@1
+    displayName: PublishBuildArtifacts
 - task: AzureRmWebAppDeployment@3
   displayName: Deploy
   inputs:

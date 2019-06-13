@@ -44,7 +44,7 @@ steps:
   inputs:
     azureSubscription: 'persistent'
     appType: 'webApp'
-    appName: 'pipelines-dotnet-core'
+    appName: 'pipelinesdotnetcore'
     deployToSlotOrASE: true
     slotName: 'production'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'

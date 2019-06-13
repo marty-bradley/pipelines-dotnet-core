@@ -38,6 +38,6 @@ steps:
 - task: AzureRmWebAppDeployment@3
   displayName: Deploy
   inputs:
-    azureSubscription: 'mbradley@pslcspisbazure3.onmicrosoft.com'
+    azureSubscription: 'persistent'
     WebAppName: 'RampUpSampleApp'
     Package: $(System.ArtifactsDirectory)/**/*.zip

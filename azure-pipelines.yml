@@ -54,6 +54,6 @@ steps:
     appName: 'pipelinesdotnetcore'
     deployToSlotOrASE: true
     slotName: 'production'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     deploymentMethod: 'auto'
  
